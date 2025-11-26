@@ -31,6 +31,10 @@ p {
     flex: 1;
 }  
 
+.container {
+    padding: 50px 0px;
+}
+
 .row {
     width: 100%;
     max-width: 800px;
@@ -39,6 +43,14 @@ p {
 
 .text--purple {
     color: #6030b1;
+}
+
+section:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+.section__title {
+    margin-bottom: 20px;
 }
 
 /* END Global Styles */
@@ -99,7 +111,7 @@ nav {
 
 .about-me__info {
     display: flex;
-    
+    flex-direction: column;
 }
 
 .about-me__info--container {
@@ -138,4 +150,47 @@ nav {
     color: #242424;
     text-decoration: none;
     padding: 0 16px;
+}
+
+.about-me__img--container {
+    flex: 1;
+    align-items: center;
+}
+
+.about-me__img {
+    width: 100%;
+    margin-top: 10%;
+}
+
+/* END ABOUT ME */
+/* TECH STACK */
+
+.language__img {
+    width: 100%;
+    max-width: 100px;
+    transition: all 300ms ease;
+}
+
+.language__img:hover {
+    filter: brightness(80%);
+    opacity: 0.86;
+    transform: scale(0.9);
+}
+
+.language {
+    width: 25%;
+}
+
+.language__img--wrapper {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+}
+
+.language__list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
 }
