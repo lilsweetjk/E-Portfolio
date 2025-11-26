@@ -171,7 +171,7 @@ nav {
     transition: all 300ms ease;
 }
 
-.language__img:hover {
+.language .language__img:hover {
     filter: brightness(80%);
     opacity: 0.86;
     transform: scale(0.9);
@@ -179,14 +179,16 @@ nav {
 
 .language {
     width: 25%;
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 
 .language__img--wrapper {
-    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 4px;
+    padding: 25px 16px;
 }
 
 .language__list {
@@ -194,3 +196,46 @@ nav {
     width: 100%;
     flex-wrap: wrap;
 }
+
+.language__name {
+    position: absolute;
+    bottom: 0;
+    transform: scale(0);
+    transition: all 300ms ease;
+    font-size: 20px;
+}
+
+.language:hover .language__name {
+    transform: scale(1);
+}
+
+/* END TECH STACK */
+/* Projects Section */
+
+.project__img {
+    width: 100%;
+}
+
+.project__wrapper {
+    display: flex;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, .45);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project__wrapper:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #1c1d25;
+    opacity: 0;
+    transition: all 450ms ease;
+}
+
+.project:hover .project__wrapper:before {
+    opacity: 0.7;
+}   
